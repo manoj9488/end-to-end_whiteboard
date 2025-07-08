@@ -9,16 +9,16 @@ router.post('/register', async (req, res) => {
   const hashed = await bcrypt.hash(password, 10);
   const user = new User({ name, email, password: hashed });
   await user.save();
-  res.json({ msg: '✅ Registered' });
+  res.json({ msg: 'Registered' });
 });
 
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  if (!user) return res.status(400).json({ msg: '❌ Invalid Email' });
+  if (!user) return res.status(40).json({ msg: 'Invalid Email' });
 
   const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) return res.status(400).json({ msg: '❌ Invalid Password' });
+  if (!isMatch) return res.status(40).json({ msg: 'Invalid Password' });
 
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
     expiresIn: '2d'

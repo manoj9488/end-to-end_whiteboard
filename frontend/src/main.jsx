@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Buffer } from 'buffer';
 import process from 'process';
 
-window.global = window;  // 👈 Adds `global`
+window.global = window;  //  Adds `global`
 window.Buffer = Buffer;
 window.process = process;
 

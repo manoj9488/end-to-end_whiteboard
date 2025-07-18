@@ -766,6 +766,7 @@ const VideoPlayer = ({
           >
             <span className="text-lg">📺</span>
             </motion.button>
+
         </motion.div>
 
         {/* Enhanced Connection quality indicator */}

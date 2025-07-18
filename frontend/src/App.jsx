@@ -23,7 +23,7 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App min-h-screen bg-gray-900">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           {/* Public Routes */}

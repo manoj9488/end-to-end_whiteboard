@@ -182,7 +182,7 @@ const LoginPage = () => {
                 </>
               ) : (
                 <>
-                  <span>🚀</span>
+                  <span> </span>
                   <span>Sign In</span>
                 </>
               )}
